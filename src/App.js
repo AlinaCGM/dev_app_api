@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { Box } from "@mui/material";
+import "@fontsource/ibm-plex-sans/500.css";
+
+import Home from "./pages/home/Home";
+import NavBar from "./components/navBar/NavBar";
+import Customers from "./pages/customers/Customers";
+import LoggedOut from "./components/logIn/LoggedOut";
+import LogIn from "./components/logIn/LogIn";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className="App" style={{ fontFamily: "IBM Plex Sans, sans-serif" }}>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/customers" element={<Customers />}></Route>
+        <Route path="/loggedOut" element={<LoggedOut />}></Route>
+        <Route path="/logIn" element={<LogIn />}></Route>
+      </Routes>
+    </Box>
   );
 }
 
