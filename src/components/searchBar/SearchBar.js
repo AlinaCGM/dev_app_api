@@ -3,7 +3,6 @@ import { TextField, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 function SearchBar({ customersData, onSearch }) {
-  console.log(customersData, "customersData, alina");
   const [userInput, setUserInput] = useState("");
 
   const filteredCustomers = customersData.filter((customer) =>

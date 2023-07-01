@@ -109,7 +109,7 @@ function NavBar() {
           >
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
@@ -155,8 +155,8 @@ function NavBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link to={page.path} exact>
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                    <Link to={page.path} exact="true">
                       <Typography className="nav-link">{page.name}</Typography>
                     </Link>
                   </MenuItem>
