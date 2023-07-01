@@ -84,7 +84,7 @@ function NavBar() {
             sx={{
               width: "30%",
               display: { md: "flex" },
-              fontFamily: "monospace",
+
               fontWeight: 300,
               letterSpacing: ".3rem",
               color: "#1c2c54",
@@ -147,6 +147,7 @@ function NavBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
+              monospace
               <Box
                 sx={{
                   display: "flex",
